@@ -1,0 +1,27 @@
+#!usr/bin/bash
+# utworz tab;ice nastepnie dodaj 3 elementy tej tablicy poza deklaracja a pozniej zamien pierwszy element z ostatnim
+# declare -a tablica=(100 12 9 70 16 0 81) 
+
+# echo ${tablica[@]}
+
+#tablica[7]=50
+#tablica[8]=9
+#tablica[9]=43
+
+#echo ${tablica[@]}
+
+#b=${tablica[0]}
+#tablica[0]=${tablica[9]}
+#tablica[9]=$b
+#echo ${tablica[@]}
+
+# znajdz min tej tablicy 
+declare -a tablica=(100 12 9 70 16 0 81 50 9 43) 
+Min=${tablica[0]}
+for liczba in "${tablica[@]}"; do 
+if (( liczba<Min )); then 
+Min=$liczba
+fi
+done
+echo "Najmniejsza liczba to: $Min"
+
